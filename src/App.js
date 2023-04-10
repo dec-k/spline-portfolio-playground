@@ -1,13 +1,15 @@
 import "./App.css";
-import { RootScene } from "./scenes/RootScene";
+import { RootCanvas } from "./scenes/RootCanvas";
 import { Core } from "./scenes/Core";
+import { Overlay } from "./scenes/Overlay";
 
 function App() {
   return (
     <div className="App">
-      <RootScene>
+      <RootCanvas useFixed>
         <Core />
-      </RootScene>
+      </RootCanvas>
+      <Overlay />
     </div>
   );
 }

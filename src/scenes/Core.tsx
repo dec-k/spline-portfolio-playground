@@ -1,4 +1,5 @@
-import { useFrame } from "@react-three/fiber";
+import { useFrame, useThree } from "@react-three/fiber";
+import { Text } from "@react-three/drei";
 import React, { useRef } from "react";
 
 export function Core() {
