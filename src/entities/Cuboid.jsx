@@ -9,12 +9,13 @@ export function Cuboid(props) {
   const [hovered, hover] = useState(false);
   const [clicked, click] = useState(false);
   // Subscribe this component to the render-loop, rotate the mesh every frame
-  useFrame((state, delta) => (ref.current.rotation.x += delta / 4));
-  useFrame((state, delta) => (ref.current.rotation.y += delta / 4));
+  // useFrame((state, delta) => (ref.current.rotation.x += delta / 4));
+  // useFrame((state, delta) => (ref.current.rotation.y += delta / 4));
 
   // Return the view, these are regular Threejs elements expressed in JSX
   return (
     <mesh
+      castShadow
       {...props}
       ref={ref}
       scale={clicked ? 1.5 : 1}
