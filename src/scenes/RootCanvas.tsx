@@ -1,6 +1,7 @@
 import { Canvas } from "@react-three/fiber";
 import React, { Suspense } from "react";
 import { RootSceneProps } from "../types/SceneTypes";
+import { OrbitControls } from "@react-three/drei";
 
 export function RootCanvas(props: RootSceneProps) {
   return (
@@ -14,11 +15,11 @@ export function RootCanvas(props: RootSceneProps) {
       }}
     >
       <Suspense fallback={null}>
-        <ambientLight intensity={0.1} />
-        <directionalLight color="red" position={[0, 0, 5]} />
+        <ambientLight intensity={0.5} />
         <camera position={[50, 0, 0]} />
         {props.children}
       </Suspense>
+      <OrbitControls />
     </Canvas>
   );
 }

@@ -1,17 +1,18 @@
 import { useFrame, useThree } from "@react-three/fiber";
 import { Text } from "@react-three/drei";
 import React, { useRef } from "react";
+import { Cuboid } from "../entities/Cuboid";
 
 export function Core() {
-  const ref = useRef<THREE.Mesh>(null!);
-
-  useFrame((state, delta) => (ref.current.rotation.x += delta / 4));
-  useFrame((state, delta) => (ref.current.rotation.y += delta / 4));
+  const floor = useRef<THREE.Mesh>(null!);
 
   return (
-    <mesh ref={ref}>
-      <octahedronGeometry args={[3, 2]} />
-      <meshStandardMaterial />
-    </mesh>
+    <>
+      <Cuboid position={[0, 0, 0]} />
+      <mesh ref={floor} position={[0, -1, 0]}>
+        <boxGeometry args={[2, 2, 4]} />
+        <meshStandardMaterial />
+      </mesh>
+    </>
   );
 }
