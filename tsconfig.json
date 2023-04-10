@@ -1,9 +1,7 @@
 {
-    "compilerOptions": {
-        "baseUrl": "./src"
-    },
-    "include": [
-        ".ts",
-        ".tsx"
-    ]
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": [".ts", ".tsx"]
 }
