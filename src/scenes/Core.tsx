@@ -5,8 +5,8 @@ import React, { useRef } from "react";
 export function Core() {
   const ref = useRef<THREE.Mesh>(null!);
 
-  useFrame((state, delta) => (ref.current.rotation.x += delta));
-  useFrame((state, delta) => (ref.current.rotation.y += delta));
+  useFrame((state, delta) => (ref.current.rotation.x += delta / 4));
+  useFrame((state, delta) => (ref.current.rotation.y += delta / 4));
 
   return (
     <mesh ref={ref}>

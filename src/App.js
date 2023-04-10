@@ -6,7 +6,7 @@ import { Overlay } from "./scenes/Overlay";
 function App() {
   return (
     <div className="App">
-      <RootCanvas useFixed>
+      <RootCanvas>
         <Core />
       </RootCanvas>
       <Overlay />

@@ -2,14 +2,24 @@ import React from "react";
 
 export function Overlay() {
   return (
-    <h1
+    <div
       style={{
         fontFamily: "Space Mono, monospace",
-        fontStyle: "italic",
-        fontSize: 120,
+        color: "white",
+        textShadow: "1px 1px black",
+        position: "absolute",
+        top: "10px",
       }}
     >
-      test text
-    </h1>
+      <h1
+        style={{
+          fontStyle: "italic",
+        }}
+      >
+        test text
+      </h1>
+      <h3>ts / c# / react / next</h3>
+      <p>smol text</p>
+    </div>
   );
 }

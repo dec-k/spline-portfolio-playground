@@ -10,6 +10,7 @@ export function RootCanvas(props: RootSceneProps) {
         height: "100vh",
         position: props.useFixed ? "fixed" : "relative",
         zIndex: props.useFixed ? -1 : 0,
+        background: "black",
       }}
     >
       <Suspense fallback={null}>
