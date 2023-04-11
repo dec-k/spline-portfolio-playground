@@ -15,7 +15,7 @@ export function Overlay() {
         }}
       >
         <Text fontSize="6xl">dec-k</Text>
-        <Text fontSize="2xl">holy fuck, a spinning cube</Text>
+        <Text fontSize="2xl">hi miks</Text>
         {/* <Text fontSize="md">Body text</Text> */}
       </div>
     </Stack>
