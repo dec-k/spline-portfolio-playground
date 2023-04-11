@@ -1,9 +1,9 @@
-import { Stack, Text } from "@chakra-ui/react";
+import { Divider, Grid, GridItem, Link, Stack, Text } from "@chakra-ui/react";
 import React from "react";
 
 export function Overlay() {
   return (
-    <Stack direction={"column"} spacing={"24px"}>
+    <Stack direction={"column"} spacing={3}>
       <div
         style={{
           fontFamily: "Space Mono",
@@ -14,9 +14,29 @@ export function Overlay() {
           left: "24px",
         }}
       >
-        <Text fontSize="6xl">dec-k</Text>
-        <Text fontSize="2xl">hi miks</Text>
-        {/* <Text fontSize="md">Body text</Text> */}
+        <Grid gap={20}>
+          <GridItem>
+            <Text fontSize="4xl">dec keighley</Text>
+            <Text fontSize="lg">typescript // react // c#</Text>
+          </GridItem>
+          <GridItem>
+            <Link href="https://themysteryjuice.com" isExternal>
+              🍊 Mystery Juice
+            </Link>
+            <br />
+            <Link
+              href="https://www.linkedin.com/in/declan-keighley-b19265a6/"
+              isExternal
+            >
+              🔵 LinkedIn
+            </Link>
+            <br />
+            <Link href="mailto:dec.keighley@gmail.com" isExternal>
+              ✉️ Contact Me
+            </Link>
+            <br />
+          </GridItem>
+        </Grid>
       </div>
     </Stack>
   );

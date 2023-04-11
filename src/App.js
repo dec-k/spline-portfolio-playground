@@ -1,18 +1,24 @@
+import { Suspense } from "react";
 import "./App.css";
-import { RootCanvas } from "./scenes/RootCanvas";
-import { Core } from "./scenes/Core";
 import { Overlay } from "./scenes/Overlay";
-import LmaoText from "./scenes/lmao";
+import SplineBackdrop from "./scenes/SplineBackdrop";
 
 function App() {
   return (
-    <div className="App">
-      <RootCanvas>
-        {/* <Core /> */}
-        <LmaoText />
-      </RootCanvas>
+    <>
+      <div
+        style={{
+          height: "100vh",
+          width: "100vw",
+          position: "fixed",
+          zIndex: -1,
+          backgroundColor: "RGB(20, 20, 20)",
+        }}
+      >
+        <SplineBackdrop />
+      </div>
       <Overlay />
-    </div>
+    </>
   );
 }
 
