@@ -82,7 +82,7 @@ export function OverlayRoot() {
                   fontFamily: "Fira Code",
                 }}
               >
-                {trans.body.about}
+                <Text fontSize="md">{trans.body.about}</Text>
               </GridItem>
             </CentredArticle>
           </Grid>

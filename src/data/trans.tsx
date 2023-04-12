@@ -1,3 +1,5 @@
+import React from "react";
+
 export const trans = {
   head: { title: "Dec // K", subtitle: "typescript // react // c#" },
   links: [
@@ -23,7 +25,22 @@ export const trans = {
     },
   ],
   body: {
-    about:
-      "I'm a developer with many years of experience across a variety of platforms. This site will change often as I find shiny new things to try.\n This site is currently built with:\n - React.JS\n - Chakra UI\n - react-three-fiber\n  - Spline\n ",
+    about: (
+      <>
+        I'm a developer with many years of experience across a variety of
+        platforms. This site will change often as I find shiny new things to
+        try. <br />
+        This site is currently built with:
+        <br />
+        - React.JS
+        <br />
+        - Chakra UI
+        <br />
+        - react-three-fiber
+        <br />
+        - Spline
+        <br />
+      </>
+    ),
   },
 };
