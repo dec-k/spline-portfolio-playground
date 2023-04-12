@@ -20,7 +20,12 @@ export function Overlay() {
           </GridItem>
           <GridItem style={{ fontFamily: "Fira Code" }}>
             <Link href="https://themysteryjuice.com" isExternal>
-              🍊 Mystery Juice
+              🍊 <b>Mystery Juice</b>
+            </Link>
+            <br />
+
+            <Link href="https://github.com/dec-k" isExternal>
+              🟣 Github
             </Link>
             <br />
 
