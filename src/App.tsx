@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
 import "./App.css";
-import { Overlay } from "./scenes/Overlay";
+import { OverlayRoot } from "./components/OverlayRoot";
 import SplineBackdrop from "./scenes/SplineBackdrop";
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
           <SplineBackdrop />
         </Suspense>
       </div>
-      <Overlay />
+      <OverlayRoot />
     </>
   );
 }
