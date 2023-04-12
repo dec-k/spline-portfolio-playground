@@ -2,6 +2,10 @@
   /* empty container, for now. maybe relocate global stylings into this file. */
 }
 
+html {
+  scroll-snap-type: y mandatory;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

@@ -1,4 +1,7 @@
 export interface RootSceneProps {
   children: any;
-  useFixed: boolean;
+}
+
+export interface CentredArticleProps {
+  children: any;
 }
