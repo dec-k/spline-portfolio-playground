@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import "./App.css";
 import { Overlay } from "./scenes/Overlay";
 import SplineBackdrop from "./scenes/SplineBackdrop";
+import { CircularProgress } from "@chakra-ui/react";
 
 function App() {
   return (
@@ -15,7 +16,9 @@ function App() {
           backgroundColor: "RGB(20, 20, 20)",
         }}
       >
-        <SplineBackdrop />
+        <Suspense fallback={"Loading..."}>
+          <SplineBackdrop />
+        </Suspense>
       </div>
       <Overlay />
     </>
