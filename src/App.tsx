@@ -1,4 +1,4 @@
-import { Suspense } from "react";
+import React, { Suspense } from "react";
 import "./App.css";
 import { Overlay } from "./scenes/Overlay";
 import SplineBackdrop from "./scenes/SplineBackdrop";
