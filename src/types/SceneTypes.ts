@@ -5,3 +5,8 @@ export interface RootSceneProps {
 export interface CentredArticleProps {
   children: any;
 }
+
+export interface ProjectProps {
+  title: string;
+  about: string;
+}

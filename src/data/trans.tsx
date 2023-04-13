@@ -1,7 +1,7 @@
 import React from "react";
 
 export const trans = {
-  head: { title: "Dec // K", subtitle: "typescript // react // c#" },
+  head: { title: "Dec // K", subtitle: "senior Web developer" },
   links: [
     {
       title: `🍊 Mystery Juice`,
@@ -37,5 +37,15 @@ export const trans = {
         "- Spline",
       ],
     },
+  },
+  projects: {
+    title: "project",
+    data: [
+      {
+        title: "Mystery juice 🍊",
+        about:
+          "Mystery Juice is an informational site aimed at informing  & teaching people about DIY vaping. It was created out of a frustration with rising prices and dodgey retailer practices. It is built utilising true serverside rendering via next.js and MUI.",
+      },
+    ],
   },
 };

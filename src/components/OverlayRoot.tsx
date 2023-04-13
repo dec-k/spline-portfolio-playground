@@ -6,6 +6,8 @@ import { CentredArticle } from "./CentredArticle";
 import { About } from "./About";
 import { TitleBlock } from "./TitleBlock";
 import { Header } from "./Header";
+import { trans } from "../data/trans";
+import { Project } from "./Project";
 
 export function OverlayRoot() {
   // Utils
@@ -34,6 +36,13 @@ export function OverlayRoot() {
           <CentredArticle>
             <About />
           </CentredArticle>
+
+          {/* Projects */}
+          {trans.projects.data.map((p) => (
+            <CentredArticle>
+              <Project title={p.title} about={p.about} />
+            </CentredArticle>
+          ))}
         </div>
       </Stack>
     </>
