@@ -28,7 +28,7 @@ export function TitleBlock() {
             fontFamily: "Major Mono Display",
           }}
         >
-          <Text fontSize="6xl">{trans.head.title}</Text>
+          <Text fontSize="5xl">{trans.head.title}</Text>
           <Text fontSize="lg">{trans.head.subtitle}</Text>
         </GridItem>
       </motion.div>
