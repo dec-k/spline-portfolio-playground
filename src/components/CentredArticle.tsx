@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import React from "react";
 import { trans } from "../data/trans";
 import { CentredArticleProps } from "../types/SceneTypes";
+import { MotionConstants } from "../data/motionConstants";
 
 // Article-like content designed to play correctly with snap points, etc. Use props.children for the actual content
 export function CentredArticle(props: CentredArticleProps) {
@@ -10,7 +11,10 @@ export function CentredArticle(props: CentredArticleProps) {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.5, delay: 2.5 }}
+      transition={{
+        duration: MotionConstants.transition.fast,
+        delay: MotionConstants.delay.slow,
+      }}
       style={{
         scrollSnapAlign: "start",
         height: "100vh",

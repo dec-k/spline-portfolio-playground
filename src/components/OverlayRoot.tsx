@@ -1,21 +1,16 @@
 import { Grid, GridItem, Link, Stack, Text } from "@chakra-ui/react";
-import { MotionValue, motion, useScroll, useTransform } from "framer-motion";
-import React, { useRef } from "react";
+import { motion, useScroll } from "framer-motion";
+import React from "react";
 import { trans } from "../data/trans";
 import "../styles/OverlayRootStyles.css";
 import { CentredArticle } from "./CentredArticle";
+import { MotionConstants } from "../data/motionConstants";
 
 export function OverlayRoot() {
-  // Refs for scrollpoints
-  const ref = useRef(null);
-
-  // Scroll progress trackers
-  function useParallax(value: MotionValue<number>, distance: number) {
-    return useTransform(value, [0, 1], [-distance, distance]);
-  }
+  // Utils
   const { scrollYProgress } = useScroll();
-  const y = useParallax(scrollYProgress, 300);
 
+  // Final render
   return (
     <>
       <motion.div
@@ -23,6 +18,8 @@ export function OverlayRoot() {
         style={{ scaleX: scrollYProgress }}
       />
       <Stack direction={"column"} spacing={3}>
+        {/* Head container div, height-enforced for scroll-snap related reasons. */}
+
         <div
           style={{
             color: "white",
@@ -35,45 +32,54 @@ export function OverlayRoot() {
           }}
         >
           <Grid gap={12}>
-            {/* Title Block */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 1.5 }}
+            <div
               style={{
-                scrollSnapAlign: "start",
+                height: "100vh",
               }}
             >
-              <GridItem
+              {/* Title Block */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{
+                  duration: MotionConstants.transition.fast,
+                  delay: MotionConstants.delay.normal,
+                }}
                 style={{
-                  fontFamily: "Major Mono Display",
+                  scrollSnapAlign: "start",
                 }}
               >
-                <Text fontSize="4xl">{trans.head.title}</Text>
-                <Text fontSize="lg">{trans.head.subtitle}</Text>
-              </GridItem>
-            </motion.div>
+                <GridItem
+                  style={{
+                    fontFamily: "Major Mono Display",
+                  }}
+                >
+                  <Text fontSize="4xl">{trans.head.title}</Text>
+                  <Text fontSize="lg">{trans.head.subtitle}</Text>
+                </GridItem>
+              </motion.div>
 
-            {/* Link Block */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 2.5 }}
-            >
-              <GridItem style={{ fontFamily: "Fira Code" }}>
-                {trans.links.map((l) => (
-                  <>
-                    <Link href={l.href} isExternal>
-                      {l.emphasise ? <b>{l.title}</b> : l.title}
-                    </Link>
-                    <br />
-                  </>
-                ))}
-              </GridItem>
-            </motion.div>
-
-            {/* Crappy padder, find a more sustainable solution. */}
-            <div style={{ height: "60vh" }} />
+              {/* Link Block */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{
+                  duration: MotionConstants.transition.fast,
+                  delay: MotionConstants.delay.slow,
+                }}
+              >
+                <GridItem style={{ fontFamily: "Fira Code" }}>
+                  {trans.links.map((l) => (
+                    <>
+                      <Link href={l.href} isExternal>
+                        {l.emphasise ? <b>{l.title}</b> : l.title}
+                      </Link>
+                      <br />
+                    </>
+                  ))}
+                </GridItem>
+              </motion.div>
+            </div>
 
             {/* About fluff */}
             <CentredArticle>
