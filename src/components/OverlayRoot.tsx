@@ -1,11 +1,10 @@
-import { Grid, GridItem, Link, Stack, Text } from "@chakra-ui/react";
+import { Stack } from "@chakra-ui/react";
 import { motion, useScroll } from "framer-motion";
 import React from "react";
-import { trans } from "../data/trans";
 import "../styles/OverlayRootStyles.css";
 import { CentredArticle } from "./CentredArticle";
-import { MotionConstants } from "../data/motionConstants";
 import { About } from "./About";
+import { TitleBlock } from "./TitleBlock";
 
 export function OverlayRoot() {
   // Utils
@@ -19,74 +18,16 @@ export function OverlayRoot() {
         style={{ scaleX: scrollYProgress }}
       />
       <Stack direction={"column"} spacing={3}>
-        {/* Head container div, height-enforced for scroll-snap related reasons. */}
+        <div className={"root-container"}>
+          {/* NOTE: Each entity inside this container should have some means to size itself to 100vh and enforce a scroll-snap rule. */}
 
-        <div
-          style={{
-            color: "white",
-            textShadow: "1px 1px black",
-            position: "absolute",
-            top: "0px",
-            left: "24px",
-            maxWidth: "960px",
-            scrollSnapType: "y mandatory",
-          }}
-        >
-          <Grid gap={12}>
-            <div
-              style={{
-                height: "100vh",
-              }}
-            >
-              {/* Title Block */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{
-                  duration: MotionConstants.transition.fast,
-                  delay: MotionConstants.delay.normal,
-                }}
-                style={{
-                  scrollSnapAlign: "start",
-                }}
-              >
-                <GridItem
-                  style={{
-                    fontFamily: "Major Mono Display",
-                  }}
-                >
-                  <Text fontSize="4xl">{trans.head.title}</Text>
-                  <Text fontSize="lg">{trans.head.subtitle}</Text>
-                </GridItem>
-              </motion.div>
+          {/* Title Block, links, etc. */}
+          <TitleBlock />
 
-              {/* Link Block */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{
-                  duration: MotionConstants.transition.fast,
-                  delay: MotionConstants.delay.slow,
-                }}
-              >
-                <GridItem style={{ fontFamily: "Fira Code" }}>
-                  {trans.links.map((l) => (
-                    <>
-                      <Link href={l.href} isExternal>
-                        {l.emphasise ? <b>{l.title}</b> : l.title}
-                      </Link>
-                      <br />
-                    </>
-                  ))}
-                </GridItem>
-              </motion.div>
-            </div>
-
-            {/* About fluff */}
-            <CentredArticle>
-              <About />
-            </CentredArticle>
-          </Grid>
+          {/* BuiltWith / About */}
+          <CentredArticle>
+            <About />
+          </CentredArticle>
         </div>
       </Stack>
     </>
