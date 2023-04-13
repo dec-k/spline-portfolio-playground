@@ -28,7 +28,7 @@ export function TitleBlock() {
             fontFamily: "Major Mono Display",
           }}
         >
-          <Text fontSize="4xl">{trans.head.title}</Text>
+          <Text fontSize="6xl">{trans.head.title}</Text>
           <Text fontSize="lg">{trans.head.subtitle}</Text>
         </GridItem>
       </motion.div>
@@ -42,7 +42,7 @@ export function TitleBlock() {
           delay: MotionConstants.delay.slow,
         }}
       >
-        <GridItem style={{ fontFamily: "Fira Code" }}>
+        <GridItem style={{ fontFamily: "Fira Code", marginTop: "12px" }}>
           {trans.links.map((l) => (
             <>
               <Link href={l.href} isExternal>

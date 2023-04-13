@@ -5,6 +5,7 @@ import "../styles/OverlayRootStyles.css";
 import { CentredArticle } from "./CentredArticle";
 import { About } from "./About";
 import { TitleBlock } from "./TitleBlock";
+import { Header } from "./Header";
 
 export function OverlayRoot() {
   // Utils
@@ -13,10 +14,15 @@ export function OverlayRoot() {
   // Final render
   return (
     <>
+      {/* Progressive Scroll */}
       <motion.div
         className={"progress-bar"}
         style={{ scaleX: scrollYProgress }}
       />
+
+      {/* Anchored Head */}
+      <Header />
+
       <Stack direction={"column"} spacing={3}>
         <div className={"root-container"}>
           {/* NOTE: Each entity inside this container should have some means to size itself to 100vh and enforce a scroll-snap rule. */}

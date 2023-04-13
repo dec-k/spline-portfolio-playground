@@ -6,6 +6,7 @@
   height: 2px;
   background-color: darkgray;
   transform-origin: 0%;
+  z-index: 2;
 }
 
 .root-container {

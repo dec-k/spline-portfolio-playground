@@ -1,0 +1,16 @@
+.anchored-header {
+  position: fixed;
+  z-index: 1; /* Lazy lazy lazy. Ensure that its LOWER than the z-index of .progress-bar in OverlayRootStyles.*/
+  width: 100vw;
+  height: 50px;
+  left: 0px;
+  top: 0px;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: inherit;
+}

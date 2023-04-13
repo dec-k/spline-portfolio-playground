@@ -26,8 +26,9 @@ export const trans = {
   ],
   body: {
     about: {
+      title: "About",
       preamble:
-        "I'm a developer with many years of experience across a variety of platforms. This site will change often as I find shiny new things to try.",
+        "I'm a senior developer based in Christchurch, New Zealand. This site will change often as I find shiny new things to try.",
       builtWith: [
         "This site is currently built with:",
         "- React.JS",
