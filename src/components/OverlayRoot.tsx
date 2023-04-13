@@ -5,6 +5,7 @@ import { trans } from "../data/trans";
 import "../styles/OverlayRootStyles.css";
 import { CentredArticle } from "./CentredArticle";
 import { MotionConstants } from "../data/motionConstants";
+import { About } from "./About";
 
 export function OverlayRoot() {
   // Utils
@@ -83,13 +84,7 @@ export function OverlayRoot() {
 
             {/* About fluff */}
             <CentredArticle>
-              <GridItem
-                style={{
-                  fontFamily: "Fira Code",
-                }}
-              >
-                <Text fontSize="md">{trans.body.about}</Text>
-              </GridItem>
+              <About />
             </CentredArticle>
           </Grid>
         </div>

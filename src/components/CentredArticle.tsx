@@ -1,11 +1,10 @@
-import { GridItem, Text } from "@chakra-ui/react";
+import { Center, Flex } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import React from "react";
-import { trans } from "../data/trans";
 import { CentredArticleProps } from "../types/SceneTypes";
 import { MotionConstants } from "../data/motionConstants";
 
-// Article-like content designed to play correctly with snap points, etc. Use props.children for the actual content
+//  Container which generates a new 100vh, scroll-snapped container and then renders child components vertically centered.
 export function CentredArticle(props: CentredArticleProps) {
   return (
     <motion.div
@@ -17,12 +16,12 @@ export function CentredArticle(props: CentredArticleProps) {
       }}
       style={{
         scrollSnapAlign: "start",
-        height: "100vh",
+        fontFamily: "Fira Code",
       }}
     >
-      <div style={{ marginTop: "40%", marginBottom: "40%" }}>
-        {props.children}
-      </div>
+      <Flex>
+        <Center h={"100vh"}>{props.children}</Center>
+      </Flex>
     </motion.div>
   );
 }

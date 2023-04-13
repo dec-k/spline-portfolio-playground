@@ -25,22 +25,16 @@ export const trans = {
     },
   ],
   body: {
-    about: (
-      <>
-        I'm a developer with many years of experience across a variety of
-        platforms. This site will change often as I find shiny new things to
-        try. <br />
-        This site is currently built with:
-        <br />
-        - React.JS
-        <br />
-        - Chakra UI
-        <br />
-        - react-three-fiber
-        <br />
-        - Spline
-        <br />
-      </>
-    ),
+    about: {
+      preamble:
+        "I'm a developer with many years of experience across a variety of platforms. This site will change often as I find shiny new things to try.",
+      builtWith: [
+        "This site is currently built with:",
+        "- React.JS",
+        "- Chakra UI",
+        "- react-three-fiber",
+        "- Spline",
+      ],
+    },
   },
 };

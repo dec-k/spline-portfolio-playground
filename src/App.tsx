@@ -3,6 +3,7 @@ import "./App.css";
 import { OverlayRoot } from "./components/OverlayRoot";
 import SplineBackdrop from "./scenes/SplineBackdrop";
 import { motion } from "framer-motion";
+import { MotionConstants } from "./data/motionConstants";
 
 function App() {
   return (
@@ -19,7 +20,10 @@ function App() {
             style={{ height: "100vh", width: "100vw" }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 3, delay: 2.5 }}
+            transition={{
+              duration: MotionConstants.transition.slow,
+              delay: MotionConstants.delay.slow,
+            }}
           >
             <SplineBackdrop />
           </motion.div>
