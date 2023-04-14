@@ -44,7 +44,18 @@ export const trans = {
       {
         title: "Mystery juice 🍊",
         about:
-          "Mystery Juice is an informational site aimed at informing  & teaching people about DIY vaping. It was created out of a frustration with rising prices and dodgey retailer practices. It is built utilising true serverside rendering via next.js and MUI.",
+          "Mystery Juice is an informational site aimed at informing & teaching people about DIY e-juice. It was created out of a frustration with rising prices and dodgey retailer practices in the industry. It is built utilising true serverside rendering via next.js and MUI.",
+      },
+    ],
+  },
+  articles: {
+    title: "article",
+    data: [
+      {
+        title: "environment, ego, and autonomy",
+        about:
+          "A short, experience-based insight into my time as a new developer and my experiences so far when on-boarding and training new developers.",
+        href: "www.google.com",
       },
     ],
   },

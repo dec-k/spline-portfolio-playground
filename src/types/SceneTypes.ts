@@ -10,3 +10,7 @@ export interface ProjectProps {
   title: string;
   about: string;
 }
+
+export interface ArticleProps extends ProjectProps {
+  href: string;
+}

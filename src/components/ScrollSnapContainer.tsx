@@ -5,7 +5,7 @@ import { CentredArticleProps } from "../types/SceneTypes";
 import { MotionConstants } from "../data/motionConstants";
 
 //  Container which generates a new 100vh, scroll-snapped container and then renders child components vertically centered.
-export function CentredArticle(props: CentredArticleProps) {
+export function ScrollSnapContainer(props: CentredArticleProps) {
   return (
     <motion.div
       initial={{ opacity: 0 }}

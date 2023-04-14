@@ -2,12 +2,13 @@ import { Stack } from "@chakra-ui/react";
 import { motion, useScroll } from "framer-motion";
 import React from "react";
 import "../styles/OverlayRootStyles.css";
-import { CentredArticle } from "./CentredArticle";
+import { ScrollSnapContainer } from "./ScrollSnapContainer";
 import { About } from "./About";
 import { TitleBlock } from "./TitleBlock";
 import { Header } from "./Header";
 import { trans } from "../data/trans";
 import { Project } from "./Project";
+import { Article } from "./Article";
 
 export function OverlayRoot() {
   // Utils
@@ -33,15 +34,22 @@ export function OverlayRoot() {
           <TitleBlock />
 
           {/* BuiltWith / About */}
-          <CentredArticle>
+          <ScrollSnapContainer>
             <About />
-          </CentredArticle>
+          </ScrollSnapContainer>
 
           {/* Projects */}
           {trans.projects.data.map((p) => (
-            <CentredArticle>
+            <ScrollSnapContainer>
               <Project title={p.title} about={p.about} />
-            </CentredArticle>
+            </ScrollSnapContainer>
+          ))}
+
+          {/* Articles */}
+          {trans.articles.data.map((a) => (
+            <ScrollSnapContainer>
+              <Article title={a.title} about={a.about} href={a.href} />
+            </ScrollSnapContainer>
           ))}
         </div>
       </Stack>
