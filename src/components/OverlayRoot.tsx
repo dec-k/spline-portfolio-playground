@@ -55,8 +55,8 @@ export function OverlayRoot() {
         </div>
       </Stack>
 
-      {/* Footer */}
-      <Footer />
+      {/* Footer temporarily disabled due to consistency issues.*/}
+      {/* <Footer /> */}
     </>
   );
 }
