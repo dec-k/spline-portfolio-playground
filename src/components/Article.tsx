@@ -10,7 +10,7 @@ export function Article(props: ArticleProps) {
       <Text fontSize="lg" style={{ fontFamily: "Major Mono Display" }}>
         {trans.articles.title}
       </Text>
-      <Link href={props.href}>
+      <Link href={props.href} isExternal>
         <Text fontSize="4xl" style={{ fontFamily: "Major Mono Display" }}>
           <ExternalLinkIcon style={{ marginRight: "12px" }} />
           {props.title}

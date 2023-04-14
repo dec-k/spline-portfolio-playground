@@ -9,6 +9,7 @@ import { Header } from "./Header";
 import { trans } from "../data/trans";
 import { Project } from "./Project";
 import { Article } from "./Article";
+import { Footer } from "./Footer";
 
 export function OverlayRoot() {
   // Utils
@@ -53,6 +54,9 @@ export function OverlayRoot() {
           ))}
         </div>
       </Stack>
+
+      {/* Footer */}
+      <Footer />
     </>
   );
 }

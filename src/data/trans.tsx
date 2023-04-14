@@ -54,7 +54,7 @@ export const trans = {
       {
         title: "environment, ego, and autonomy",
         about:
-          "A short, experience-based insight into my time as a new developer and my experiences so far when on-boarding and training new developers.",
+          "A short article about my career history where I discuss attributes of what makes a good or bad workplaces, and my values for training and growing new developers.",
         href: "www.google.com",
       },
     ],
