@@ -28,7 +28,7 @@ export const trans = {
     about: {
       title: "About",
       preamble:
-        "I'm a senior developer based in Christchurch, New Zealand. This site will change often as I find shiny new things to try.",
+        "I'm a senior developer based in Christchurch, New Zealand. I like messing around with new and shiny things - expect the site to change rather often!",
       builtWith: [
         "This site is currently built with:",
         "- React.JS",
@@ -44,7 +44,7 @@ export const trans = {
       {
         title: "Mystery juice 🍊",
         about:
-          "Mystery Juice is an informational site aimed at informing & teaching people about DIY e-juice. It was created out of a frustration with rising prices and dodgey retailer practices in the industry. It is built utilising true serverside rendering via next.js and MUI.",
+          "Mystery Juice is an informational site aimed at informing & teaching people about DIY e-juice. It was created out of a frustration with rising prices and dodgey retailer practices in the industry. It is built utilising serverside rendering via next.js and MUI.",
       },
     ],
   },
